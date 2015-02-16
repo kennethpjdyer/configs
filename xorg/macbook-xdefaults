@@ -1,0 +1,4 @@
+# xterm Configuration
+xterm*background: black
+xterm*foreground: white
+
