@@ -5,8 +5,7 @@
 (global-linum-mode 1)
 
 ;; Buffer Modification
-(set-buffer-modified-p nil)
-
+(setq load-library 'modtime-skip-mode)
 
 ;; Customization File
 (setq custom-file "~/.emacs.d/custom.el")  
