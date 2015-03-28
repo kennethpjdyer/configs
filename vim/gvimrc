@@ -1,0 +1,10 @@
+
+" Define Window Size for gvim
+set lines=30
+set columns = 20
+
+" Syntax Highlighting
+syntax on
+ 
+
+

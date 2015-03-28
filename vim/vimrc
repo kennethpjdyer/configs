@@ -1,0 +1,30 @@
+
+" Define Window Size for gvim
+if has ("gui_running")
+	set lines=30 columns=60
+endif
+
+" Configure Statusline
+set laststatus=2
+set statusline=%t "tail of filename
+set statusline+=[%{strlen(&fenc)?&fenc:'none'}, "file encoding
+set statusline+=%{&ff} "file format
+set statusline+=%h "help file flag
+set statusline+=%m "modified flag
+set statusline+=%r "readonly flag
+set statusline+=%y "filetype
+set statusline+=%= " left/right separator
+set statusline+=%c, "cursor column
+set statusline+=%l/%L "cusor line/total lines
+set statusline+=\ %P " percentage through file
+
+
+
+" Define Tabstop
+set tabstop=4
+
+" Syntax Highlighting
+syntax on
+ 
+
+
