@@ -17,9 +17,6 @@
 (setq save-abbrevs t)
 
 ;; Buffer Modification
-(add-to-list 'load-path "~/.emacs.d/elpa/modtime-skip-mode-0.9/")
-(load "modtime-skip-mode")
-(setq modtime-skip-mode 1)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Formating Configurations
@@ -44,7 +41,21 @@
 	     (flyspell-mode)
 	     (visual-line-mode)
 	     (adaptive-wrap-prefix-mode nil)
+	     (if (fboundp 'modtime-skip-mode
+			  (setq modtime-skip-mode t) ))
 ))
+
+;; Markdown Mode Hook
+(add-to-list 'auto-mode-alist
+	     '("\\.md" . markdown-mode))
+(add-hook 'markdown-mode-hook
+	  '(lambda ()
+	     (flyspell-mode)
+	     (visual-line-mode)
+	     (adaptive-wrap-prefix-mode nil)
+	     (modtime-skip-mode t)))
+
+
 
 ;; DBus support
 (require 'dbus)
@@ -52,7 +63,7 @@
 
 ;; Weblogger Setup
 (require 'xml-rpc)
-(require 'weblogger)
+;(require 'weblogger)
 (defun DE-org-export-weblogger()
   (interactive)
   (let ((tmpbuffer (get-buffer-create " *org html export*"))
