@@ -11,6 +11,10 @@
 # Date: April 2016                            #
 ###############################################
 
+# Source Global Definitions
+if [ -f /etc/bashrc ]; then
+    . /etc/bashrc
+fi
 
 
 ###############################################
@@ -35,3 +39,13 @@ export PS1='[\u@\h \w]\n[\T] \$  '
 #    +
 
 
+
+#################################################
+# Aliases
+
+
+# GitHub
+alias galera_github = 'lynx https://github.com/codership/documentation'
+alias galera_issues = 'lynx https://github.com/codership/documentation/issues'
+
+alias orientdb_github = 'lynx https://github.com/orientechnologies/orientdb-docs'

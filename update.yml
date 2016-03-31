@@ -1,0 +1,19 @@
+--- # Ansible Play to Update Local Files
+- hosts: local
+  tasks:
+  - name: Echo
+    raw: echo {{ ansible_env.PWD }}/bash/bashrc > test
+  - name: Update bashrc
+    file:
+      dest={{ ansible_env.HOME }}/.bashrc
+      src={{ ansible_env.PWD }}/bash/bashrc
+  - name: Update Scripts
+    copy:
+      dest=/usr/bin/{{ item }}
+      src={{ ansible_env.PWD }}/scripts/{{ item }}
+      mode=0755
+    become: yes
+    with_items:
+      - ghi-issues.py
+
+
