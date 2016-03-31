@@ -1,8 +1,8 @@
 
 " Define Window Size for gvim
-if has ("gui_running")
-	set lines=30 columns=60
-endif
+"if has ("gui_running")
+"	set lines=30 columns=60
+"endif
 
 " Configure Statusline
 set laststatus=2
@@ -26,5 +26,14 @@ set tabstop=4
 " Syntax Highlighting
 syntax on
  
+" Pathogen Plugin Manager
+"execute pathogen#infect()
+
+" Powerline Configuration
+"python from powerline.vim import setup as powerline_setup
+"python powerline_setup()
+"python del powerline_setup
+set laststatus=2
+set t_Co=256
 
 

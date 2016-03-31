@@ -1,0 +1,37 @@
+# Bash Configuration File
+
+###############################################
+# bashrc - FIle loads to ~/.bashrc.  Provides #
+#  the primary configuration for bash on this #
+#  system.                                    #
+#                                             #
+# Author: Kenneth P. J. Dyer                  #
+# Version: 0.1                                #
+#                                             #
+# Date: April 2016                            #
+###############################################
+
+
+
+###############################################
+# Bash Prompt Configuration
+
+# PS1: Primary Prompt, value expanded
+#    [\u@\h \W]\$
+
+export PS1='[\u@\h \w]\n[\T] \$  '
+
+
+# PS2: Secondary Prompt, value expanded
+#    >
+
+# PS3: Select Command Promt
+#    (blank)
+
+# PS4: Printed before each command displayed during
+#   an execution trace.  First character replicated
+#   multiple times as necessary to indicate multiple
+#   levels of indirection.
+#    +
+
+
